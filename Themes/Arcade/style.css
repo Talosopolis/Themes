@@ -1,0 +1,238 @@
+
+/* --- ARCADE THEME --- */
+
+@font-face {
+  font-family: 'PixelFont';
+  src: url('https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: 'PixelFont', 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #00FF00; /* Bright Green */
+    text-shadow: 2px 2px #000;
+    margin: 0;
+    padding: 2rem 0;
+    image-rendering: pixelated; /* Ensure sharp pixels */
+    background-image:
+        linear-gradient(rgba(0, 15, 0, 0.75), rgba(0, 15, 0, 0.75)),
+        url(https://www.transparenttextures.com/patterns/lined-paper.png);
+    background-color: #0a0a0a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FF00FF; /* Bright Magenta */
+    text-transform: uppercase;
+}
+
+a {
+    color: #00FFFF; /* Bright Cyan */
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #00FFFF;
+    color: #000;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-header h1 {
+    font-size: 4rem;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #FF00FF,
+      0 0 11px #FF00FF,
+      0 0 19px #FF00FF,
+      0 0 40px #FF00FF,
+      0 0 80px #FF00FF,
+      0 0 90px #FF00FF,
+      0 0 100px #FF00FF,
+      0 0 150px #FF00FF;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.glassmorphic-card, .theme-switcher, .dropdown-content, .accordion-content {
+    background: #111;
+    border: 4px solid #00FF00;
+    border-image: repeating-linear-gradient(45deg, #FF00FF, #FF00FF 10px, #00FF00 10px, #00FF00 20px) 1;
+    box-shadow: inset 0 0 15px rgba(0,255,0,0.5), 0 0 10px #00FF00;
+    padding: 2rem;
+    border-radius: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.cta-button, .buy-button, button {
+    font-family: 'PixelFont', 'Courier New', Courier, monospace;
+    background-color: #111;
+    color: #FF00FF;
+    border: 4px solid #FF00FF;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0px #00FFFF;
+    transition: transform 0.1s, box-shadow 0.1s;
+    border-radius: 0;
+    position: relative;
+}
+
+.cta-button:hover, .buy-button:hover, button:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #00FFFF;
+}
+
+.cta-button:active, .buy-button:active, button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #00FFFF;
+}
+
+/* --- Form Elements --- */
+input, textarea, select {
+    font-family: 'PixelFont', 'Courier New', Courier, monospace;
+    background: #222;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 10px;
+    width: calc(100% - 24px); /* Adjust for padding and border */
+    font-size: 1rem;
+    border-radius: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00FF00;
+    background: #000;
+}
+
+/* --- Date/Time Inputs --- */
+input[type="date"],
+input[type="time"] {
+    position: relative;
+    color-scheme: dark;
+    padding: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: #111;
+    border: 2px solid #00FF00;
+    padding: 5px;
+    cursor: pointer;
+    filter: invert(1) brightness(1);
+    border-radius: 0;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+    background: #00FF00;
+    box-shadow: 0 0 10px #00FF00;
+    filter: invert(1) brightness(0);
+}
+
+/* Note: Styling the actual calendar pop-up is extremely limited. 
+   The `color-scheme: dark;` is the most reliable way to suggest a dark theme. */
+
+/* --- Checkboxes & Radio --- */
+.checkbox-group label, .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+input[type="checkbox"], input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00FF00;
+    cursor: pointer;
+    position: relative;
+}
+input[type="radio"] {
+    border-radius: 50%;
+}
+input[type="checkbox"]:checked::before {
+    content: 'X';
+    font-size: 18px;
+    color: #FF00FF;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+}
+input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #FF00FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Toggle Switch --- */
+.switch {
+    width: 80px;
+    height: 40px;
+}
+.slider {
+    background-color: #222;
+    border: 2px solid #00FF00;
+    border-radius: 0;
+}
+.slider:before {
+    height: 32px;
+    width: 32px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #00FF00;
+    transition: .2s;
+    border-radius: 0;
+}
+input:checked + .slider {
+    background-color: #222;
+}
+input:checked + .slider:before {
+    background-color: #FF00FF;
+    transform: translateX(38px);
+}
+
+/* --- Range Slider --- */
+input[type="range"] {
+    height: 24px;
+    background: transparent;
+    border: 2px solid #00FF00;
+    padding: 2px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #FF00FF;
+    border: 2px solid #00FFFF;
+    border-radius: 0;
+}
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #FF00FF;
+    border: 2px solid #00FFFF;
+    border-radius: 0;
+}

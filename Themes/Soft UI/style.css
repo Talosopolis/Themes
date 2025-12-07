@@ -1,0 +1,230 @@
+
+/* General Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #e0e5ec;
+    color: #555;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Hide other theme elements */
+.y2k-banners, #background-animation { display: none; }
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    padding: 10px;
+}
+
+#theme-select, #sort-by, #filter-dimension, #filter-orientability {
+    font-family: inherit;
+    background: #e0e5ec;
+    border: none;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 
+        inset 5px 5px 10px #a3b1c6,
+        inset -5px -5px 10px #ffffff;
+}
+
+/* Layout and Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header and Footer */
+.site-header, .site-footer {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.site-header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    font-weight: 600;
+    color: #777;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #888;
+}
+
+.site-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Neumorphic Card Styling */
+.glassmorphic-card {
+    background: #e0e5ec;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 
+        10px 10px 20px #a3b1c6,
+        -10px -10px 20px #ffffff;
+}
+
+.site-header nav a, .cta-button, .buy-button {
+    font-family: inherit;
+    color: #666;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 50px;
+    background: #e0e5ec;
+    box-shadow: 
+        5px 5px 10px #a3b1c6,
+        -5px -5px 10px #ffffff;
+    transition: all 0.3s;
+}
+
+.site-header nav a:hover, .cta-button:hover, .buy-button:hover {
+    color: #333;
+}
+
+.site-header nav a:active, .cta-button:active, .buy-button:active {
+    box-shadow: 
+        inset 5px 5px 10px #a3b1c6,
+        inset -5px -5px 10px #ffffff;
+}
+
+.site-footer {
+    padding-top: 2rem;
+}
+
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #777;
+    text-align: center;
+    font-weight: 600;
+}
+
+p, ul {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* Form Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+input[type="date"],
+input[type="time"] {
+    font-family: inherit;
+    background: #e0e5ec;
+    border: none;
+    color: #555;
+    padding: 15px;
+    width: calc(100% - 30px);
+    border-radius: 20px;
+    box-shadow: 
+        inset 5px 5px 10px #a3b1c6,
+        inset -5px -5px 10px #ffffff;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+/* Custom Range Slider */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: transparent;
+    border-radius: 10px;
+    outline: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    background: #e0e5ec;
+    border-radius: 10px;
+    box-shadow: 
+        inset 4px 4px 8px #a3b1c6,
+        inset -4px -4px 8px #ffffff;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #e0e5ec;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* Center the thumb on the track */
+    box-shadow: 
+        4px 4px 8px #a3b1c6,
+        -4px -4px 8px #ffffff;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+}
+.switch input { display: none; }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e0e5ec;
+    border-radius: 40px;
+    transition: .4s;
+    box-shadow: 
+        inset 4px 4px 8px #a3b1c6,
+        inset -4px -4px 8px #ffffff;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 5px;
+    bottom: 5px;
+    background-color: #e0e5ec;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 
+        3px 3px 6px #a3b1c6,
+        -3px -3px 6px #ffffff;
+}
+input:checked + .slider {
+    /* No color change for neumorphism */
+}
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+

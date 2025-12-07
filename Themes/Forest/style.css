@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+/* General Body Styles */
+body {
+    font-family: 'Merriweather', serif;
+    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f0f0f0; /* Light text for contrast against dark background */
+    margin: 0;
+    padding: 2rem 0;
+}
+
+/* Hide other theme elements */
+.y2k-banners, #background-animation { display: none; }
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background: rgba(10, 20, 10, 0.7); /* Dark green, semi-transparent */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #90a955; /* Earthy green */
+}
+
+#theme-select, #sort-by, #filter-dimension, #filter-orientability {
+    font-family: 'Merriweather', serif;
+    background: rgba(10, 20, 10, 0.8);
+    color: #f0f0f0;
+    border: 1px solid #90a955;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* Layout and Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header and Footer */
+.site-header, .site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: none;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.site-header h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    color: #ecf39e; /* Light, earthy yellow */
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+.site-header nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.site-header nav a:hover {
+    color: #ecf39e; /* Highlight color */
+}
+
+/* Natural Card Styling */
+.glassmorphic-card {
+    background: rgba(15, 30, 15, 0.75); /* Dark, mossy green */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(144, 169, 85, 0.5); /* Semi-transparent earthy green border */
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #d4e2d4; /* Soft, light green */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d4e2d4;
+}
+
+/* Buttons */
+.cta-button, .buy-button {
+    font-family: inherit;
+    background-color: #4f772d; /* Forest green */
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.cta-button:hover, .buy-button:hover {
+    background-color: #6a994e; /* Lighter green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Date Picker Styles */
+input[type="date"],
+input[type="time"] {
+    color-scheme: dark;
+    font-family: 'Merriweather', serif;
+    background: rgba(10, 20, 10, 0.8);
+    color: #f0f0f0;
+    border: 1px solid #90a955;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Text Inputs and Textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    font-family: 'Merriweather', serif;
+    background: rgba(10, 20, 10, 0.8);
+    color: #f0f0f0;
+    border: 1px solid #90a955;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ecf39e;
+    box-shadow: 0 0 10px rgba(144, 169, 85, 0.7);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Specific section adjustments */
+.product-showcase .product-card {
+    text-align: center;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    border-left: 4px solid #90a955;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.testimonials cite {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    color: #adc178;
+}

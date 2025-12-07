@@ -1,0 +1,213 @@
+
+/* General Body Styles */
+body {
+    font-family: 'Georgia', serif;
+    background: #f4f1ea url('https://www.transparenttextures.com/patterns/old-wall.png');
+    color: #4a4a4a;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+/* Hide other theme elements */
+.y2k-banners, #background-animation { display: none; }
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background: #e8e3d8;
+    padding: 10px;
+    border: 1px solid #c8c0b0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#theme-select, #sort-by, #filter-dimension, #filter-orientability {
+    font-family: inherit;
+    background: url('https://www.transparenttextures.com/patterns/lined-paper.png');
+    border: 1px solid #b8a890;
+    color: #5a4a3a;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Layout and Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header and Footer */
+.site-header, .site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: transparent;
+}
+
+.site-header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    margin: 0;
+    color: #6b5a4b;
+    font-weight: normal;
+}
+
+.tagline {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #7a6a5a;
+}
+
+.site-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.site-header nav a {
+    color: #6b5a4b;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.site-header nav a:hover {
+    border-color: #8b7a6b;
+}
+
+.site-footer {
+    border-top: 1px solid #d8d0c0;
+    margin-top: 2rem;
+}
+
+/* Card Styling */
+.glassmorphic-card {
+    background: #fdfaf3;
+    border: 1px solid #d8d0c0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 30px;
+    border-radius: 4px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #3a2a1a;
+    text-align: center;
+    font-weight: normal;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5a4a3a;
+}
+
+/* Buttons */
+.cta-button, .buy-button {
+    font-family: inherit;
+    background: #a4886d;
+    border: 1px solid #85684d;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+}
+
+.cta-button:active, .buy-button:active {
+    background: #85684d;
+}
+
+/* Form Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+input[type="date"],
+input[type="time"] {
+    font-family: inherit;
+    background-color: #fdfaf3;
+    border: 1px solid #d8d0c0;
+    color: #5a4a3a;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border-radius: 4px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Custom Range Slider */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #d8d0c0;
+    border-radius: 3px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fdfaf3;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #b8a890;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+.switch input { display: none; }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d8d0c0;
+    border-radius: 28px;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+input:checked + .slider {
+    background-color: #a4886d;
+}
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+/* Import necessary fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display&display=swap');

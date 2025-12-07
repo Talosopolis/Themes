@@ -1,0 +1,265 @@
+
+/* General Body Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #0D0208;
+    color: #00FF41;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+.y2k-banners { display: none; } /* Hide Y2K banners */
+
+#background-animation {
+    position: fixed; /* Use fixed to keep it in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00FF41;
+}
+
+#theme-select, #sort-by, #filter-dimension, #filter-orientability {
+    background-color: #0D0208;
+    color: #00FF41;
+    border: 1px solid #00FF41;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    text-shadow: 0 0 5px #00FF41;
+}
+
+/* Layout and Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header and Footer */
+.site-header, .site-footer {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.site-header h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 15px #00FF41;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.site-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.site-header nav a {
+    color: #00FF41;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: text-shadow 0.3s;
+}
+
+.site-header nav a:hover {
+    text-shadow: 0 0 10px #00FF41;
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.fine-print {
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+
+/* Sections */
+section {
+    margin-bottom: 4rem;
+}
+
+/* Glassmorphic Card Styling */
+.glassmorphic-card {
+    background: rgba(0, 255, 65, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.3);
+    padding: 30px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #00FF41;
+    text-shadow: 0 0 10px #00FF41;
+    text-align: center;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #eee;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+/* Buttons */
+.cta-button, .buy-button {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: transparent;
+    border: 2px solid #00FF41;
+    color: #00FF41;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    margin-top: 1rem;
+    text-shadow: 0 0 5px #00FF41;
+}
+
+.cta-button:hover, .buy-button:hover {
+    background-color: #00FF41;
+    color: #0D0208;
+    box-shadow: 0 0 20px #00FF41;
+}
+
+/* Date Picker Styles */
+input[type="date"],
+input[type="time"] {
+    color-scheme: dark;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0D0208;
+    color: #00FF41;
+    border: 1px solid #00FF41;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    text-shadow: 0 0 5px #00FF41;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) sepia(1) saturate(100) hue-rotate(90deg);
+    cursor: pointer;
+}
+
+/* Text Inputs and Textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0D0208;
+    color: #00FF41;
+    border: 1px solid #00FF41;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    text-shadow: 0 0 5px #00FF41;
+    width: calc(100% - 22px);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 15px #00FF41;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+/* Product Showcase */
+.product-showcase {
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 255, 65, 0.1);
+    border: 1px solid #00FF41;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+}
+
+.testimonial-card {
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    color: #00FF41;
+}
+
+cite {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* Link styling */
+a {
+    color: #00FF41;
+}
+
+a:hover {
+    color: #fff;
+}

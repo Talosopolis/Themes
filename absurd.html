@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absurdist Applet - Manifold.ly</title>
+    <link id="theme-style" rel="stylesheet" href="Themes/Forest/style.css">
+</head>
+<body>
+    <div class="theme-switcher">
+        <label for="theme-select">Choose a theme:</label>
+        <select id="theme-select" onchange="changeTheme(this.value)">
+        </select>
+    </div>
+
+    <canvas id="background-animation"></canvas>
+
+    <header class="site-header">
+        <h1><a href="index.html" style="text-decoration: none; color: inherit;">Manifold.ly</a></h1>
+        <p class="tagline">Embrace the Absurd</p>
+    </header>
+
+    <main class="container">
+        <section class="glassmorphic-card">
+            <h2>The Absurdist Applet</h2>
+            <p>Enter some text below and see what happens. Or don't. It doesn't really matter.</p>
+            <div class="applet-container">
+                <textarea id="absurd-input" class="absurd-textarea" placeholder="Type something here..."></textarea>
+                <button id="absurd-button" class="buy-button">Do Something Absurd</button>
+                <div id="absurd-output" class="absurd-output"></div>
+            </div>
+        </section>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Navigation</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Our Manifolds</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="buy-button dropdown-button">Apps</button>
+            <div class="dropdown-content">
+                <a href="absurd.html">Absurdist Applet</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; In this moment, and all others. Manifold.ly.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const absurdButton = document.getElementById('absurd-button');
+        const absurdInput = document.getElementById('absurd-input');
+        const absurdOutput = document.getElementById('absurd-output');
+
+        const absurdFunctions = [
+            (text) => text.split('').reverse().join(''),
+            (text) => text.toUpperCase(),
+            (text) => text.toLowerCase(),
+            (text) => text.split('').sort(() => Math.random() - 0.5).join(''),
+            (text) => text.replace(/[aeiou]/gi, 'oob'),
+            (text) => {
+                const words = text.split(' ');
+                const newWords = words.map(word => word.length > 3 ? word.slice(1) + word[0] + 'ay' : word);
+                return newWords.join(' ');
+            },
+            (text) => {
+                let newText = '';
+                for(let i = 0; i < text.length; i++) {
+                    newText += i % 2 === 0 ? text[i].toUpperCase() : text[i].toLowerCase();
+                }
+                return newText;
+            }
+        ];
+
+        absurdButton.addEventListener('click', () => {
+            const randomFunction = absurdFunctions[Math.floor(Math.random() * absurdFunctions.length)];
+            absurdOutput.textContent = randomFunction(absurdInput.value);
+        });
+
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

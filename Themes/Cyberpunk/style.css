@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* General Body Styles */
+body {
+    font-family: 'Orbitron', sans-serif; /* A futuristic font */
+    background: #0d021b;
+    color: #00ffc6;
+    margin: 0;
+    padding: 2rem 0;
+    overflow-x: hidden;
+}
+
+/* Hide other theme elements */
+.y2k-banners { display: none; }
+
+/* Canvas for dynamic background */
+#background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind all content */
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #00ffc6;
+}
+
+#theme-select, #sort-by, #filter-dimension, #filter-orientability {
+    font-family: 'Orbitron', sans-serif;
+    background: rgba(10, 10, 25, 0.5);
+    color: #00ffc6;
+    border: 1px solid #00ffc6;
+    padding: 5px;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #00ffc6;
+    box-shadow: 0 0 10px rgba(0, 255, 198, 0.5);
+}
+
+
+/* Layout and Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative; /* Ensure content is above canvas */
+    z-index: 2;
+}
+
+/* Header and Footer */
+.site-header, .site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: none;
+    text-shadow: 0 0 10px #00ffc6, 0 0 20px #00ffc6;
+}
+
+.site-header h1 {
+    font-size: 5rem;
+    margin: 0;
+    color: #00ffc6;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #00ffc6;
+}
+
+.site-header nav a {
+    color: #00ffc6;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.site-header nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 15px #fff;
+}
+
+/* Neon Card Styling (flicker removed) */
+.glassmorphic-card {
+    background: rgba(10, 10, 25, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 2px solid #00ffc6;
+    padding: 30px;
+    box-shadow:
+        0 0 5px #00ffc6,
+        0 0 10px #00ffc6,
+        0 0 20px #00ffc6,
+        inset 0 0 10px #00ffc6;
+    transition: box-shadow 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #ff00c1;
+    text-shadow: 0 0 10px #ff00c1;
+    text-align: center;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #eee;
+}
+
+/* Buttons */
+.cta-button, .buy-button {
+    font-family: inherit;
+    background-color: transparent;
+    border: 2px solid #ff00c1;
+    border-radius: 10px;
+    color: #ff00c1;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    text-shadow: 0 0 8px #ff00c1;
+    box-shadow: 0 0 15px #ff00c1;
+}
+
+.cta-button:hover, .buy-button:hover {
+    background-color: rgba(255, 0, 193, 0.2);
+    box-shadow: 0 0 25px #ff00c1, 0 0 10px #ff00c1;
+}
+
+/* Date Picker Styles */
+input[type="date"],
+input[type="time"] {
+    color-scheme: dark;
+    font-family: 'Orbitron', sans-serif;
+    background: rgba(10, 10, 25, 0.5);
+    color: #00ffc6;
+    border: 1px solid #00ffc6;
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #00ffc6;
+    box-shadow: 0 0 10px rgba(0, 255, 198, 0.5);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) sepia(1) saturate(100) hue-rotate(130deg);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+    filter: invert(1) sepia(1) saturate(100) hue-rotate(130deg) brightness(1.2);
+}
+
+/* Text Inputs and Textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    font-family: 'Orbitron', sans-serif;
+    background: rgba(10, 10, 25, 0.5);
+    color: #00ffc6;
+    border: 1px solid #00ffc6;
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #00ffc6;
+    box-shadow: 0 0 10px rgba(0, 255, 198, 0.5);
+    width: calc(100% - 22px);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff00c1;
+    box-shadow: 0 0 15px #ff00c1;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}

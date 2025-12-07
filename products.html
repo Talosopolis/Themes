@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Manifold.ly</title>
+    <link id="theme-style" rel="stylesheet" href="Themes/Forest/style.css">
+</head>
+<body>
+    <div class="theme-switcher">
+        <label for="theme-select">Choose a theme:</label>
+        <select id="theme-select" onchange="changeTheme(this.value)">
+        </select>
+    </div>
+
+    <canvas id="background-animation"></canvas>
+
+    <header class="site-header">
+        <h1><a href="index.html" style="text-decoration: none; color: inherit;">Manifold.ly</a></h1>
+        <p class="tagline">Our Exquisite Collection of Higher-Dimensional Geometries</p>
+        <nav>
+            <ul>
+                <li><a href="products.html">Our Manifolds</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="product-filters" class="glassmorphic-card" style="margin-bottom: 2rem;">
+            <h2>Filter Our Collection</h2>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div>
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by" name="sort-by">
+                        <option value="popularity">Popularity</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filter-dimension">Dimension:</label>
+                    <select id="filter-dimension" name="filter-dimension">
+                        <option value="all">All</option>
+                        <option value="3d">3D (Immersions)</option>
+                        <option value="4d">4D</option>
+                        <option value="higher">Higher Dimensions</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filter-orientability">Orientability:</label>
+                    <select id="filter-orientability" name="filter-orientability">
+                        <option value="all">All</option>
+                        <option value="orientable">Orientable</option>
+                        <option value="non-orientable">Non-Orientable</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-showcase">
+            <div class="product-grid">
+                <div class="product-card glassmorphic-card">
+                    <h3>The Classic Klein Bottle</h3>
+                    <img src="https://via.placeholder.com/200x200.png?text=Klein+Bottle" alt="A Klein Bottle" class="product-image">
+                    <p>The perfect entry-level manifold. A non-orientable surface with no inside or outside. Great for storing your existential dread. Side effects may include getting stuck in a continuous loop.</p>
+                    <div class="product-meta">
+                        <span>Dimension: 4D</span> | <span>Non-Orientable</span>
+                    </div>
+                    <button class="buy-button">Acquire for 3 Easy Payments of Your Sanity</button>
+                </div>
+                <div class="product-card glassmorphic-card">
+                    <h3>The Premium Boy's Surface</h3>
+                     <img src="https://via.placeholder.com/200x200.png?text=Boy's+Surface" alt="A Boy's Surface" class="product-image">
+                    <p>For the discerning connoisseur of chaos. An immersion of the real projective plane in 3-space. Warning: May cause spontaneous poetry generation.</p>
+                     <div class="product-meta">
+                        <span>Dimension: 3D (Immersion)</span> | <span>Non-Orientable</span>
+                    </div>
+                    <button class="buy-button">Embrace the Absurd</button>
+                </div>
+                <div class="product-card glassmorphic-card">
+                    <h3>The Deluxe Calabi-Yau Manifold</h3>
+                     <img src="https://via.placeholder.com/200x200.png?text=Calabi-Yau" alt="A Calabi-Yau Manifold" class="product-image">
+                    <p>The pinnacle of topological luxury. This compact Kähler manifold is essential for anyone serious about string theory or folding spacetime in their living room.</p>
+                     <div class="product-meta">
+                        <span>Dimension: 6D (typically)</span> | <span>Orientable</span>
+                    </div>
+                    <button class="buy-button">Fold Spacetime</button>
+                </div>
+                <div class="product-card glassmorphic-card">
+                    <h3>The Mobius Strip Scarf</h3>
+                     <img src="https://via.placeholder.com/200x200.png?text=Mobius+Scarf" alt="A Mobius Strip Scarf" class="product-image">
+                    <p>Stay warm and topologically interesting with this stylish, one-sided scarf. Perfect for chilly evenings in any dimension. Guaranteed to have only one edge.</p>
+                     <div class="product-meta">
+                        <span>Dimension: 2D (in 3D space)</span> | <span>Non-Orientable</span>
+                    </div>
+                    <button class="buy-button">Accessorize with Paradoxes</button>
+                </div>
+                 <div class="product-card glassmorphic-card">
+                    <h3>The Hyper-Torus Hyper-Bagel</h3>
+                     <img src="https://via.placeholder.com/200x200.png?text=Hyper-Torus" alt="A Hyper-Torus" class="product-image">
+                    <p>It's a bagel, but more. So much more. Do not attempt to eat unless you possess a trans-dimensional digestive system. Excellent for carrying other, smaller manifolds.</p>
+                     <div class="product-meta">
+                        <span>Dimension: 4D</span> | <span>Orientable</span>
+                    </div>
+                    <button class="buy-button">Order a Dozen</button>
+                </div>
+                 <div class="product-card glassmorphic-card">
+                    <h3>Seifert Surface Starter Kit</h3>
+                     <img src="https://via.placeholder.com/200x200.png?text=Seifert+Surface" alt="A Seifert Surface" class="product-image">
+                    <p>Ever wanted to build your own bounded surface? Our kit provides everything you need to create a beautiful Seifert surface for any knot or link. Instructions may or may not be paradoxical.</p>
+                     <div class="product-meta">
+                        <span>Dimension: 2D</span> | <span>Orientable</span>
+                    </div>
+                    <button class="buy-button">Start Building</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Right Now, and in all possible timelines. Manifold.ly. All rights reserved (subject to temporal paradoxes).</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

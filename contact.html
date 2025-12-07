@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Manifold.ly</title>
+    <link id="theme-style" rel="stylesheet" href="Themes/Forest/style.css">
+</head>
+<body>
+    <div class="theme-switcher">
+        <label for="theme-select">Choose a theme:</label>
+        <select id="theme-select" onchange="changeTheme(this.value)">
+        </select>
+    </div>
+
+    <canvas id="background-animation"></canvas>
+
+    <header class="site-header">
+        <h1><a href="index.html" style="text-decoration: none; color: inherit;">Manifold.ly</a></h1>
+        <p class="tagline">Reach Out Across the Void</p>
+        <nav>
+            <ul>
+                <li><a href="products.html">Our Manifolds</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="contact-form" class="glassmorphic-card">
+            <h2>Send a Hyper-Message</h2>
+            <p>Please fill out the form below. Your message will be encoded into a tachyon beam and fired into the past, where we will hopefully receive it last week.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name (or current designation)</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Subspace Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                 <div class="form-group">
+                    <label for="d-o-b">Your Perceived Date of Birth</label>
+                    <input type="date" id="d-o-b" name="d-o-b" required>
+                </div>
+                <div class="form-group">
+                    <label for="transmission-time">Preferred Time of Transmission</label>
+                    <input type="time" id="transmission-time" name="transmission-time" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Method of Existential Dread (select at least one):</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="dread" value="cosmic"> Cosmic Indifference</label>
+                        <label><input type="checkbox" name="dread" value="solipsism"> Solipsistic Doubt</label>
+                        <label><input type="checkbox" name="dread" value="entropy"> Inevitable Entropy</label>
+                        <label><input type="checkbox" name="dread" value="other"> Other (Please specify in message)</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Urgency Level:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="urgency" value="whenever"> Whenever</label>
+                        <label><input type="radio" name="urgency" value="before_heat_death"> Before Heat Death of Universe</label>
+                        <label><input type="radio" name="urgency" value="yesterday"> Yesterday</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="absurdity-level">Desired Level of Absurdity: <span id="absurdity-value">5</span></label>
+                    <input type="range" id="absurdity-level" name="absurdity-level" min="1" max="11" value="5">
+                </div>
+
+                <div class="form-group toggle-group">
+                    <label for="paradox-insurance">Paradox Insurance?</label>
+                    <label class="switch">
+                        <input type="checkbox" id="paradox-insurance" name="paradox-insurance">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="tooltip">Protects against temporal displacement, spontaneous non-existence, and unwanted sandwich recipes from the past.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message (in this reality)</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Dispatch Message</button>
+            </form>
+        </section>
+
+        <section id="other-methods" class="glassmorphic-card">
+            <h2>Alternative Contact Methods</h2>
+            <ul>
+                <li><strong>Carrier Pigeon:</strong> Please attach your message to a pigeon that can navigate non-Euclidean geometries. We are not responsible for pigeons that arrive as a flock of seagulls or a sentient cloud of angst.</li>
+                <li><strong>Telepathy:</strong> Project your thoughts towards the Crab Nebula and think 'Manifold.ly'. If you receive an answer in the form of a recipe for a particularly good sandwich, you have succeeded.</li>
+                <li><strong>Ouija Board:</strong> We monitor all Ouija board traffic. Please be patient, as the lines can get crowded, especially on weekends.</li>
+                <li><strong>Sending a Message in a Klein Bottle:</strong> Simply write your message, put it in a Klein bottle, and throw it... away? Towards you? Good luck.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Right Now, and in all possible timelines. Manifold.ly. All rights reserved (subject to temporal paradoxes).</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

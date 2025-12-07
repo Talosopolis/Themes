@@ -1,0 +1,231 @@
+  
+/* General Body Styles */
+body {
+    font-family: 'Lucida Console', 'Monaco', monospace;
+    background-color: #0f0c29;
+    background-image: url('https://i.pinimg.com/originals/8d/03/4c/8d034c743c1627341b52a78b9b8b394b.jpg'); /* Synthwave grid background */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #00d9ff;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+/* Hide other theme elements */
+.y2k-banners { display: none; }
+#background-animation { display: none; }
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ff00c1;
+    box-shadow: 0 0 15px #ff00c1;
+}
+
+#theme-select, #sort-by, #filter-dimension, #filter-orientability {
+    background-color: #0f0c29;
+    color: #00d9ff;
+    border: 1px solid #ff00c1;
+    font-family: 'Lucida Console', 'Monaco', monospace;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 0, 193, 0.7), inset 0 0 5px rgba(255, 0, 193, 0.5);
+    text-shadow: 0 0 5px #00d9ff;
+}
+
+/* Layout and Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header and Footer */
+.site-header, .site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: none;
+}
+
+.site-header h1 {
+    font-size: 5rem;
+    margin: 0;
+    color: #ff00c1;
+    text-shadow: 0 0 5px #ff00c1, 0 0 10px #ff00c1, 0 0 20px #ff00c1, 0 0 40px #ff00c1;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #00d9ff;
+    text-shadow: 0 0 5px #00d9ff;
+}
+
+.site-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.site-header nav a {
+    color: #00d9ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: text-shadow 0.3s, color 0.3s;
+}
+
+.site-header nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #00d9ff;
+}
+
+.site-footer {
+    border-top: 1px solid #ff00c180;
+    padding-top: 2rem;
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Neon Card Styling */
+.glassmorphic-card {
+    background: rgba(15, 12, 41, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border: 1px solid #ff00c1;
+    box-shadow: 0 0 20px #ff00c1, inset 0 0 15px rgba(255, 0, 193, 0.5);
+    padding: 30px;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #ff00c1;
+    text-shadow: 0 0 10px #ff00c1;
+    text-align: center;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #eee;
+}
+
+/* Buttons */
+.cta-button, .buy-button {
+    font-family: inherit;
+    background-color: transparent;
+    border: 2px solid #00d9ff;
+    border-radius: 10px;
+    color: #00d9ff;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    text-shadow: 0 0 8px #00d9ff;
+    box-shadow: 0 0 15px #00d9ff;
+}
+
+.cta-button:hover, .buy-button:hover {
+    background-color: #00d9ff;
+    color: #0f0c29;
+    box-shadow: 0 0 25px #00d9ff, 0 0 40px #00d9ff;
+}
+
+/* Date Picker Styles */
+input[type="date"],
+input[type="time"] {
+    color-scheme: dark;
+    font-family: 'Lucida Console', 'Monaco', monospace;
+    background-color: #0f0c29;
+    color: #00d9ff;
+    border: 1px solid #ff00c1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 0, 193, 0.7), inset 0 0 5px rgba(255, 0, 193, 0.5);
+    text-shadow: 0 0 5px #00d9ff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) sepia(1) saturate(100) hue-rotate(280deg);
+    cursor: pointer;
+}
+/* Text Inputs and Textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    font-family: 'Lucida Console', 'Monaco', monospace;
+    background-color: #0f0c29;
+    color: #00d9ff;
+    border: 1px solid #ff00c1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 0, 193, 0.7), inset 0 0 5px rgba(255, 0, 193, 0.5);
+    text-shadow: 0 0 5px #00d9ff;
+    width: calc(100% - 22px);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00d9ff;
+    box-shadow: 0 0 20px #00d9ff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+/* Product Showcase */
+.product-image {
+    display: none; /* Hide placeholder images for a cleaner look */
+}
+
+/* Testimonials */
+blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    color: #ff00c1;
+    text-shadow: 0 0 5px #ff00c1;
+}
+
+cite {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* Link styling */
+a {
+    color: #00d9ff;
+}
+
+a:hover {
+    color: #fff;
+}

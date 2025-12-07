@@ -1,13 +1,121 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myapp</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifold.ly - Your Personal Purveyor of Higher-Dimensional Geometries</title>
+    <link id="theme-style" rel="stylesheet" href="Themes/Hacker/style.css">
+</head>
+<body>
+    <div class="y2k-banners">
+        <div class="y2k-banner-top">
+            <marquee>+++ MANIFOLD.LY +++ YOUR #1 SOURCE FOR TOPOLOGICAL ANOMALIES +++ GET YOUR KLEIN BOTTLE TODAY! +++ FREE DIMENSION WITH EVERY PURCHASE +++</marquee>
+        </div>
+        <div class="y2k-banner-left">
+            <img src="https://www.cameronsworld.net/img/content/8/2/04.gif" alt="Dancing Baby">
+            <img src="https://www.cameronsworld.net/img/content/1/4/08.gif" alt="Under Construction">
+            <img src="https://www.cameronsworld.net/img/content/2/5/01.gif" alt="Spinning Email">
+            <img src="https://www.cameronsworld.net/img/content/2/8/01.gif" alt="Exploding Star">
+        </div>
+        <div class="y2k-banner-right">
+            <img src="https://www.cameronsworld.net/img/content/7/5/08.gif" alt="Bouncing WWW">
+            <img src="https://www.cameronsworld.net/img/content/6/9/05.gif" alt="Spinning Globe">
+            <img src="https://www.cameronsworld.net/img/content/1/1/02.gif" alt="Flying CD">
+            <img src="https://www.cameronsworld.net/img/content/8/8/06.gif" alt="Welcome to the Web">
+        </div>
+    </div>
+
+    <div class="theme-switcher">
+        <label for="theme-select">Choose a theme:</label>
+        <select id="theme-select" onchange="changeTheme(this.value)">
+        </select>
+    </div>
+
+    <canvas id="background-animation"></canvas>
+
+    <header class="site-header">
+        <h1>Manifold.ly</h1>
+        <p class="tagline">Your Personal Purveyor of Higher-Dimensional Geometries</p>
+        <nav>
+            <ul>
+                <li><a href="products.html">Our Manifolds</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="hero" class="glassmorphic-card">
+            <h2>Are You Tired of Living in a Boring, Predictable Euclidean Space?</h2>
+            <p>Do you feel... flat? Is your life a straight line from point A to point B? Are you sick of the Pythagorean theorem dictating your every move? It's time to break free from the tyranny of three dimensions.</p>
+            <button class="cta-button">Transcend Now!</button>
+        </section>
+
+        <section id="products" class="product-showcase">
+            <h2>Our Exquisite Collection</h2>
+            <div class="product-grid">
+                <div class="product-card glassmorphic-card">
+                    <h3>The Classic Klein Bottle</h3>
+                    <img src="https://via.placeholder.com/150" alt="A Klein Bottle" class="product-image">
+                    <p>The perfect entry-level manifold. A non-orientable surface with no inside or outside. Great for storing your existential dread, or as a conversation starter. Side effects may include getting stuck in a continuous loop.</p>
+                    <button class="buy-button">Acquire for 3 Easy Payments of Your Sanity</button>
+                </div>
+                <div class="product-card glassmorphic-card">
+                    <h3>The Premium Boy's Surface</h3>
+                    <img src="https://via.placeholder.com/150" alt="A Boy's Surface" class="product-image">
+                    <p>For the discerning connoisseur of chaos. An immersion of the real projective plane in 3-space. Warning: May cause spontaneous poetry generation and an inexplicable craving for marmalade.</p>
+                    <button class="buy-button">Embrace the Absurd</button>
+                </div>
+                <div class="product-card glassmorphic-card">
+                    <h3>The Deluxe Calabi-Yau Manifold</h3>
+                    <img src="https://via.placeholder.com/150" alt="A Calabi-Yau Manifold" class="product-image">
+                    <p>The pinnacle of topological luxury. This compact Kähler manifold with a vanishing Ricci curvature is essential for anyone serious about string theory or just wanting to fold spacetime in their living room. Comes with a free extra dimension.</p>
+                    <button class="buy-button">Fold Spacetime</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="why" class="why-us glassmorphic-card">
+            <h2>Why Settle for 3D? The Manifold.ly Advantage</h2>
+            <ul>
+                <li>✅ **Impress Your Friends:** Nothing says "I'm intellectually superior" like casually mentioning your Calabi-Yau manifold at a dinner party.</li>
+                <li>✅ **Unparalleled Security:** Your secrets are safe when they're stored in a dimension that technically doesn't exist.</li>
+                <li>✅ **Discover Your True Self:** And all the other versions of you in parallel universes.</li>
+                <li>✅ **It's Hilarious:** Let's be honest, this is the main reason.</li>
+            </ul>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>Whispers from the Void (Testimonials)</h2>
+            <div class="testimonial-card glassmorphic-card">
+                <blockquote>"I bought a manifold and now I can see the fourth dimension. It's mostly just more paperwork."</blockquote>
+                <cite>- A Satisfied Customer</cite>
+            </div>
+            <div class="testimonial-card glassmorphic-card">
+                <blockquote>"Meow."</blockquote>
+                <cite>- A Cat (Probably)</cite>
+            </div>
+             <div class="testimonial-card glassmorphic-card">
+                <blockquote>"My entire perception of reality has been shattered. 10/10 would recommend."</blockquote>
+                <cite>- Schrödinger, probably talking about our products</cite>
+            </div>
+        </section>
+        
+        <section id="contact" class="glassmorphic-card">
+            <h2>Get In Touch</h2>
+            <p>Have a question? A concern? A revelation? Reach out to us through your preferred method of non-standard communication.</p>
+            <p>Carrier Pigeon | Telepathy | Ouija Board | Sending a Message in a Klein Bottle</p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Right Now, and in all possible timelines. Manifold.ly. All rights reserved (subject to temporal paradoxes).</p>
+        <p class="fine-print">*Manifold.ly is not responsible for any existential crises, unintended dimensional shifts, or encounters with hyper-intelligent shades of the color blue. Please manifold responsibly.*</p>
+    </footer>
+
+    <script src="script.js?v=1.1"></script>
+</body>
 </html>
